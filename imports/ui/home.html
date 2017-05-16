@@ -1,0 +1,24 @@
+<body>
+	<h1>MkrEd</h1>
+	{{> loginButtons}}
+
+	<br>
+	<br>
+	{{# if loggedIn}}
+		{{> lessonform}}
+
+
+			{{#each lessons}}
+				{{this.title}},
+				<br/>
+				<span style="background:#eee">{{this.content}}</span>
+				<br/>
+				<br/>
+				<br/>
+			{{/each}}
+
+
+	{{/if}}
+
+</body>	
+
