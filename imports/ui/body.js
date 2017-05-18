@@ -15,11 +15,16 @@ Template.body.helpers({
 		return Meteor.userId();
 	},
 	lessons(){
-		return Lessons.find({})
+		let templessons = []
+		let myLessons = Lessons.find({});
+		myLessons.forEach(function(lesson){
+			lesson.userId == Meteor.userId()? templessons.push(lesson):''
+		})
+		return templessons
 	}
 })
 
-
+// return Lessons.find({})
 Template.body.events({
 	'submit .lesson-plan'(e){
 		e.preventDefault();
@@ -28,7 +33,7 @@ Template.body.events({
 
 
 
-		Meteor.call('insertLesson',title,content);
+		Meteor.call('insertLesson',Meteor.userId(),title,content);
 	}
 
 });
