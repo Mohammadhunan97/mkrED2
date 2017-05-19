@@ -17,11 +17,17 @@
 				{{> lessonform}}</div><br>
 
 			<div class='mylessons'>
+
 				{{#each lessons}}
-					<hr>{{this.title}},<br/>
+					<hr>
+
+					<strong>{{this.title}}:</strong>
+					 <button data={{this}} class='update'>edit</button><button data={{this}} class='delete'>delete</button>
+					<br/>
 					{{this.content}}
 					<br/>
-					{{this.date}}
+
+					<span class='pubdate'>{{this.date}}</span>
 					<br/><br/>
 				{{/each}}
 			</div>

@@ -11,9 +11,9 @@ Meteor.methods({
 			content,
 			userId,
 			date
-		})
-		
-
-		
+		})		
+	},
+	deleteLesson: function(lessonId){
+		Lessons.remove(lessonId)
 	}
 });

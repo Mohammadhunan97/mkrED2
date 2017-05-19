@@ -38,6 +38,8 @@ body{
 }
 .mylessons{
     display: none;
+    margin: 0px 10vw 0px 10vw;
+    font-size: 1.4em;
 }
 .logo{
 	color: #e74c3c;
@@ -50,7 +52,10 @@ body{
 	background: #3498db;
 	border: #3498db;
 }
-
+.pubdate{
+	background: #eee;
+	font-size: 1.5em;
+}
 @media only screen and (max-width: 500px){
 	.logo{
 		font-size: 3.1em;

@@ -50,10 +50,25 @@ Template.body.events({
 		document.getElementsByClassName('lf')[0].style.display = 'block';
 		document.getElementsByClassName('create')[0].style.display = 'none';
 		document.getElementsByClassName('mylessons')[0].style.display = 'none';
+		document.getElementsByClassName('title')[0].value = '';
+		document.getElementsByClassName('content2')[0].value ='';
 	},
 	'click .viewMyLessons'(){
 		document.getElementsByClassName('mylessons')[0].style.display = 'block';
+		document.getElementsByClassName('create')[0].style.display = 'block';
 		document.getElementsByClassName('lf')[0].style.display = 'none';
+	},
+	'click .delete'(e){
+		Meteor.call('deleteLesson',this._id);
+	},
+	'click .update'(e){
+		console.log(this)
+		alert('edit your lesson');
+		document.getElementsByClassName('mylessons')[0].style.display = 'none';
+		document.getElementsByClassName('lf')[0].style.display = 'block';
+		document.getElementsByClassName('title')[0].value = this.title;
+		document.getElementsByClassName('content2')[0].value = this.content;
+		Meteor.call('deleteLesson',this._id);
 	}
 
 });
