@@ -4,22 +4,27 @@ body{
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
     text-align: center;
+    margin: 0;
+    padding: 0;
+    text-shadow: -0.2px 0 #2c3e50, 0 0.2px #2c3e50, 0.2px 0 #2c3e50, 0 -0.2px #2c3e50;
 }
 .content,.title{
 	width: 40vw;
 	margin: 10px 0px 10px 0px;
 }
 .title{
-	margin-left: 20px;
+	width: 90vw;
+	padding: 2px;
+	border: solid 1px black;
 }
 .content{
 	height: 200px;
 }
 .content2{
-	margin-left: 5vw;
-	border: solid 3px black;
+	border-radius: 10px;
+	border: solid 1px #eee;
 	width: 80vw;
-    height: 60vh;
+    height: 40vh;
 }
 .canvas{
 	width: 70vw;
@@ -45,6 +50,7 @@ body{
 	color: #e74c3c;
 	font-size: 10.1em;
 	font-family: 'Gloria Hallelujah', cursive;
+	text-shadow: -1px 0 #c0392b, 0 1px #c0392b, 1px 0 #c0392b, 0 -1px #c0392b;
 }
 .create,.viewMyLessons{
 	padding: 10px;
@@ -56,8 +62,17 @@ body{
 	background: #eee;
 	font-size: 1.5em;
 }
+.submit{
+	background: #e74c3c;
+	border: solid 2px #e74c3c;
+	border-radius: 5px;
+	padding: 10px;
+}
 @media only screen and (max-width: 500px){
 	.logo{
 		font-size: 3.1em;
+	}
+	.submit{
+		width: 100vw;
 	}
 }
