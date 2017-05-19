@@ -34,24 +34,14 @@ Template.body.events({
 		Meteor.call('insertLesson',Meteor.userId(),title,content);
 		document.getElementsByClassName('create')[0].style.display = 'block';
 		document.getElementsByClassName('lf')[0].style.display = 'none';
+		document.getElementsByClassName('mylessons')[0].style.display = 'block';
+		console.log('bat')
+
 
 	responsiveVoice.speak(title, "UK English Male");
 	responsiveVoice.speak('hm', "UK English Male");
 	responsiveVoice.speak(content, "UK English Male")
 
-	let canvas = document.getElementById('canvas');
-	canvas.innerHTML = `<p class='flip-scale-up-hor'>${content}</p>`;
-
-	$('flip-scale-up-hor').attr('class','');
-	setTimeout(function(){
-		$('flip-scale-up-hor').attr('class','a');
-	},3000);
-	$.get('http://api.giphy.com/v1/gifs/search?q='+title+'&api_key=dc6zaTOxFJmzC',function(result){
-		c(result)
-		c(result.data[0].url)
-	})
-		document.getElementsByClassName('mylessons')[0].style.display = 'block';
-		document.getElementsByClassName('lf')[0].style.display = 'none';
 
 
 
