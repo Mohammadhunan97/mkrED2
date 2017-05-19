@@ -5,11 +5,12 @@ Meteor.methods({
 	insertLesson: function(userId,title,content){
 		check(title, String);
 		check(content, String);
-
+		let date = new Date();
 		let current = Lessons.insert({
 			title,
 			content,
-			userId
+			userId,
+			date
 		})
 		
 

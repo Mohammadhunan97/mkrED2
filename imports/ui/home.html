@@ -5,19 +5,22 @@
 	<br>
 	<br>
 	{{# if loggedIn}}
-		{{> lessonform}}
 
 
-			{{#each lessons}}
-				{{this.title}},
-				<br/>
-				<span style="background:#eee">{{this.content}}</span>
-				<br/>
-				<br/>
-				<br/>
-			{{/each}}
+			<button class='create'>Create a new Lesson</button>
+
+			{{> canvas}}
+
+			<div class='lf'>{{> lessonform}}</div><br>
 
 
+		{{#each lessons}}
+			<hr>{{this.title}},<br/>
+			{{this.content}}
+			<br/>
+			{{this.date}}
+			<br/><br/>
+		{{/each}}
 	{{/if}}
 
 </body>	

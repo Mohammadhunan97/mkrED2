@@ -1,1 +1,26 @@
 /* CSS declarations go here */
+.content,.title{
+	width: 40vw;
+	margin: 10px 0px 10px 0px;
+}
+.title{
+	margin-left: 20px;
+}
+.content{
+	height: 200px;
+}
+.content2{
+	margin-left: 5vw;
+	border: solid 3px black;
+	width: 80vw;
+    height: 60vh;
+}
+.canvas{
+	width: 70vw;
+	height:40vh;
+	border: solid 2px black;
+	background: #3498db;
+}
+.lf{
+	display: none;
+}
