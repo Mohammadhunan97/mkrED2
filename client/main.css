@@ -1,4 +1,10 @@
 /* CSS declarations go here */
+body{
+    background: url('https://im3.ezgif.com/tmp/ezgif-3-226a3e4f8e.gif');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    text-align: center;
+}
 .content,.title{
 	width: 40vw;
 	margin: 10px 0px 10px 0px;
@@ -23,4 +29,30 @@
 }
 .lf{
 	display: none;
+}
+
+.flip-scale-up-hor {
+	-webkit-animation: flip-scale-up-hor 0.5s linear both;
+	-moz-animation: flip-scale-up-hor 0.5s linear both;
+	animation: flip-scale-up-hor 0.5s linear both;
+}
+.mylessons{
+    display: none;
+}
+.logo{
+	color: #e74c3c;
+	font-size: 10.1em;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+.create,.viewMyLessons{
+	padding: 10px;
+	border-radius: 5px;
+	background: #3498db;
+	border: #3498db;
+}
+
+@media only screen and (max-width: 500px){
+	.logo{
+		font-size: 3.1em;
+	}
 }

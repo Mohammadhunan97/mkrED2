@@ -1,5 +1,8 @@
 <body>
-	<h1>MkrEd</h1>
+	<h1 class='logo'>mkrEd.</h1>
+
+
+
 	{{> loginButtons}}
 
 	<br>
@@ -8,19 +11,20 @@
 
 
 			<button class='create'>Create a new Lesson</button>
-
-			{{> canvas}}
-
-			<div class='lf'>{{> lessonform}}</div><br>
-
-
-		{{#each lessons}}
-			<hr>{{this.title}},<br/>
-			{{this.content}}
-			<br/>
-			{{this.date}}
+			<button class='viewMyLessons'>View My Lessons</button>
 			<br/><br/>
-		{{/each}}
+			<div class='lf'>
+				{{> lessonform}}</div><br>
+
+			<div class='mylessons'>
+				{{#each lessons}}
+					<hr>{{this.title}},<br/>
+					{{this.content}}
+					<br/>
+					{{this.date}}
+					<br/><br/>
+				{{/each}}
+			</div>
 	{{/if}}
 
 </body>	

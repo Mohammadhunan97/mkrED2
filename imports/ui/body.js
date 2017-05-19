@@ -40,22 +40,18 @@ Template.body.events({
 	responsiveVoice.speak(content, "UK English Male")
 
 	let canvas = document.getElementById('canvas');
-	let ctx = canvas.getContext('2d');
+	canvas.innerHTML = `<p class='flip-scale-up-hor'>${content}</p>`;
 
-
-	for(let i=0; i<=content.length;i++){
-		ctx.clearRect(0,0,canvas.width,canvas.height)
-		ctx.fillText(content,50,50)
-	}
-
-	
-	ctx.fillText(content,50,50)
-	console.log(canvas)
-
-
-
-
-
+	$('flip-scale-up-hor').attr('class','');
+	setTimeout(function(){
+		$('flip-scale-up-hor').attr('class','a');
+	},3000);
+	$.get('http://api.giphy.com/v1/gifs/search?q='+title+'&api_key=dc6zaTOxFJmzC',function(result){
+		c(result)
+		c(result.data[0].url)
+	})
+		document.getElementsByClassName('mylessons')[0].style.display = 'block';
+		document.getElementsByClassName('lf')[0].style.display = 'none';
 
 
 
@@ -63,7 +59,12 @@ Template.body.events({
 	'click .create'(){
 		document.getElementsByClassName('lf')[0].style.display = 'block';
 		document.getElementsByClassName('create')[0].style.display = 'none';
-	}	
+		document.getElementsByClassName('mylessons')[0].style.display = 'none';
+	},
+	'click .viewMyLessons'(){
+		document.getElementsByClassName('mylessons')[0].style.display = 'block';
+		document.getElementsByClassName('lf')[0].style.display = 'none';
+	}
 
 });
 
