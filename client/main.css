@@ -1,6 +1,6 @@
 /* CSS declarations go here */
 body{
-    background: url('https://im3.ezgif.com/tmp/ezgif-3-226a3e4f8e.gif');
+    background: url('https://media.giphy.com/media/l1KVaQZLhpsvclGj6/giphy.gif');
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
     text-align: center;
@@ -22,7 +22,7 @@ body{
 }
 .content2{
 	border-radius: 10px;
-	border: solid 1px #eee;
+	border: solid 1px black;
 	width: 80vw;
     height: 40vh;
 }
