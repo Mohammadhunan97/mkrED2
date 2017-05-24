@@ -1,0 +1,18 @@
+
+<template name='yourlessons'>
+
+	Lessons
+	{{#each lessons}}
+		<hr>
+
+		<strong><span class='mytitle content'>{{this.title}}</span></strong>
+		<br>
+		<button data={{this}} class='update'>edit</button><button data={{this}} class='delete'>delete</button><button data={{this}} class='play'>Play from Beginning</button><button data={{this}} class='pause'>Pause</button><button class='continue'>Continue</button>
+		<br/>
+		<span class='content'>{{this.content}}</span>
+		<br/>
+
+		<span class='pubdate content'>{{this.date}}</span>
+		<br/><br/>
+	{{/each}}
+</template>

@@ -1,37 +1,35 @@
 <body>
 	<h1 class='logo'>mkrEd.</h1>
+	<p>Create, manage, and hear audio for your lesson plans</p>
 
 
-
-	{{> loginButtons}}
+	<span class='login'>{{> loginButtons}}
+		{{# if loggedIn}}
+		{{else}}
+		<p>You must be 18 or older or have parents permission to use this app</p>
+		{{/if}}
+	</span>
 
 	<br>
 	<br>
 	{{# if loggedIn}}
 
 
-			<button class='create'>Create a new Lesson</button>
-			<button class='viewMyLessons'>View My Lessons</button>
-			<br/><br/>
-			<div class='lf'>
-				{{> lessonform}}</div><br>
-
-			<div class='mylessons'>
-
-				{{#each lessons}}
-					<hr>
-
-					<strong>{{this.title}}:</strong>
-					 <button data={{this}} class='update'>edit</button><button data={{this}} class='delete'>delete</button>
-					<br/>
-					{{this.content}}
-					<br/>
-
-					<span class='pubdate'>{{this.date}}</span>
-					<br/><br/>
-				{{/each}}
-			</div>
+		<button class='create'>Create a new Lesson</button>
+		<button class='viewMyLessons'>View My Lessons</button>
+		<br>
+		<br>
+		<div class='lf'>
+			{{> lessonform}}
+		</div>
+		<br>
+		<div class='mylessons'>
+		{{# if lessons}}
+			{{> yourlessons}}
+		{{else}}
+			<h2 class='nolessons'>You have not created any lessons, yet</h2>
+		{{/if}}
+		</div>
 	{{/if}}
-
 </body>	
 

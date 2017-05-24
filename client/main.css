@@ -1,7 +1,7 @@
 /* CSS declarations go here */
 body{
-    background: url('https://media.giphy.com/media/l1KVaQZLhpsvclGj6/giphy.gif');
-    background-size: 100vw 100vh;
+    background: url('./wb.gif');
+    background-size: 140vw 240vh;
     background-repeat: no-repeat;
     text-align: center;
     margin: 0;
@@ -53,6 +53,7 @@ body{
 	text-shadow: -1px 0 #c0392b, 0 1px #c0392b, 1px 0 #c0392b, 0 -1px #c0392b;
 }
 .create,.viewMyLessons{
+	display: inline-block;
 	padding: 10px;
 	border-radius: 5px;
 	background: #3498db;
@@ -68,11 +69,44 @@ body{
 	border-radius: 5px;
 	padding: 10px;
 }
+.login{
+	position: absolute;
+	left: 20px;
+	top: 20px;
+}
+.mytitle{
+	 text-decoration: underline;
+}
+.content{
+	font-family: 'Roboto', sans-serif;
+}
+.continue{
+	display: none;
+}
 @media only screen and (max-width: 500px){
 	.logo{
-		font-size: 3.1em;
+		font-size: 5.1em;
 	}
 	.submit{
 		width: 100vw;
+	}
+	.nolessons{
+		font-size: 1em;
+	}
+	.mylessons{
+		margin: 0px;
+	}
+	.mediabody{
+		background-size: 140vw 56vh;
+	}
+}
+@media only screen and (min-width: 650px) and(max-width: 750px){
+	.mediabody{
+		background-size: 140vw 170vh;
+	}
+}
+@media only screen and (min-width: 750px){
+	.logo{
+		margin: 20px;
 	}
 }
